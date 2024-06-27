@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       'EasyScheduling - Sistema de Agendamento e Controle de Negócios',
     description:
       'Otimize a gestão de agendamentos, colaboradores, serviços, produtos e controle financeiro com nosso sistema.',
-    images: ['https://i.imgur.com/MPMcyPP.png']
+    images: ['https://i.imgur.com/NJ1OJ4h.png']
   }
 }
 

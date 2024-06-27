@@ -19,7 +19,7 @@ export default function Home() {
           Otimize a gestão de agendamentos, colaboradores, serviços, produtos e controle financeiro com nosso sistema.
         </Typography>
         <Link
-          href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio"
+          href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20meu%20negócio"
           target="_blank"
         >
           <Button size="tiny" variant="ghost">
@@ -106,7 +106,7 @@ export default function Home() {
           </Typography>
           <div>Agende uma demonstração ou entre em contato conosco para mais informações</div>
           <Link
-            href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio"
+            href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20meu%20negócio"
             target="_blank"
           >
             <Button size="tiny" variant="ghost">
