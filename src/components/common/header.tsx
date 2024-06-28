@@ -35,7 +35,7 @@ export function Header({ className }: SidebarProps) {
     <Link href="/" className="pointer flex items-center">
       <img src="/icon1.png" className="mr-3" />
       <Typography className="!text-white !text-base font-medium ">
-        Easyscheduling
+        EasyScheduling
       </Typography>
     </Link>
   )
