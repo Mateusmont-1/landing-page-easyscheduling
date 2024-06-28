@@ -173,7 +173,7 @@ export default function Home() {
             <Image src="/logo_felipe_lima.png" alt="Cliente 1" width={100} height={100} className="rounded-full" />
             <Typography variant="h3">Felipe Lima Barbearia</Typography>
             <Typography variant="p">
-              "A interface é intuitiva e fácil de usar. Perfeito para a minha Barbearia."
+            &quot;A interface é intuitiva e fácil de usar. Perfeito para a minha Barbearia.&quot;
             </Typography>
           </div>
         </div>
