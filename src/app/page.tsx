@@ -6,10 +6,7 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <div
-      className="flex flex-col h-full md:py-36 md:px-32 pt-11 pb-24 px-8
-        w-full items-center text-center gap-12"
-    >
+    <div className="flex flex-col h-full md:py-36 md:px-32 pt-11 pb-24 px-8 w-full items-center text-center gap-12">
       <div className="flex flex-col gap-6 items-center">
         <Typography className="max-w-2xl" variant="h1">
           Sistema de Agendamento e Controle de Negócios
@@ -17,19 +14,10 @@ export default function Home() {
         <Typography className="max-w-2xl" variant="h5">
           Otimize a gestão de agendamentos, colaboradores, serviços, produtos e controle financeiro com nosso sistema.
         </Typography>
-        <Link
-          href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio"
-          target="_blank"
-        >
+        <Link href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio" target="_blank">
           <Button size="tiny" variant="ghost">
-            <Image
-              src="/whatsapp-logo.png"
-              alt="WhatsApp Logo"
-              width={20}
-              height={20}
-              className="mr-2"
-            />
-            {`Comece Agora`}
+            <Image src="/whatsapp-logo.png" alt="WhatsApp Logo" width={20} height={20} className="mr-2" />
+            Comece Agora
           </Button>
         </Link>
         <div className="w-full">
@@ -43,7 +31,7 @@ export default function Home() {
           />
         </div>
       </div>
-      
+
       {/* Seção de Preços */}
       <div className="flex flex-col gap-6 items-center">
         <Typography className="max-w-2xl" variant="h1">
@@ -56,10 +44,7 @@ export default function Home() {
             <Typography variant="p" className="text-sm">
               *Sem limitações no número de colaboradores
             </Typography>
-            <Link
-              href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20plano%20mensal%20do%20sistema%20EasyScheduling"
-              target="_blank"
-            >
+            <Link href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20plano%20mensal%20do%20sistema%20EasyScheduling" target="_blank">
               <Button size="tiny" variant="ghost">Comece Agora</Button>
             </Link>
           </div>
@@ -69,10 +54,7 @@ export default function Home() {
             <Typography variant="p" className="text-sm">
               *Sem limitações no número de colaboradores
             </Typography>
-            <Link
-              href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20plano%20anual%20do%20sistema%20EasyScheduling"
-              target="_blank"
-            >
+            <Link href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20plano%20anual%20do%20sistema%20EasyScheduling" target="_blank">
               <Button size="tiny" variant="ghost">Comece Agora</Button>
             </Link>
           </div>
@@ -181,6 +163,64 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Seção de Depoimentos */}
+      <div className="flex flex-col gap-6 items-center">
+        <Typography className="max-w-2xl" variant="h1">
+          Casos de Sucesso
+        </Typography>
+        <div className="flex flex-col md:flex-row gap-6 items-center">
+          <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
+            <Image src="/logo_felipe_lima.png" alt="Cliente 1" width={100} height={100} className="rounded-full" />
+            <Typography variant="h3">Felipe Lima Barbearia</Typography>
+            <Typography variant="p">
+              "A interface é intuitiva e fácil de usar. Perfeito para a minha Barbearia."
+            </Typography>
+          </div>
+        </div>
+      </div>
+      
+      {/* Seção de FAQs */}
+      <div className="flex flex-col gap-6 items-center">
+        <Typography className="max-w-2xl" variant="h1">
+          Perguntas Frequentes
+        </Typography>
+        <div className="flex flex-col md:flex-row gap-6 items-center">
+          <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
+            <Typography variant="h3">Como funciona o período de teste?</Typography>
+            <Typography variant="p">
+              Oferecemos um período de teste de 14 dias para você experimentar todas as funcionalidades do sistema.
+            </Typography>
+          </div>
+          <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
+            <Typography variant="h3">Posso cancelar a qualquer momento?</Typography>
+            <Typography variant="p">
+              Sim, você pode cancelar sua assinatura a qualquer momento sem nenhum custo adicional.
+            </Typography>
+          </div>
+        </div>
+      </div>
+
+      {/* Seção de Destaques/Benefícios */}
+      <div className="flex flex-col gap-6 items-center">
+        <Typography className="max-w-2xl" variant="h1">
+          Por que escolher nosso sistema?
+        </Typography>
+        <div className="flex flex-col md:flex-row gap-6 items-center">
+          <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
+            <Typography variant="h3">Facilidade de Uso</Typography>
+            <Typography variant="p">
+              Interface intuitiva e fácil de usar, sem necessidade de treinamento avançado.
+            </Typography>
+          </div>
+          <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
+            <Typography variant="h3">Suporte ao Cliente</Typography>
+            <Typography variant="p">
+              Suporte dedicado para ajudar você em qualquer momento.
+            </Typography>
+          </div>
+        </div>
+      </div>
+
       <div className="flex flex-col md:pt-24 md:gap-36 gap-24 items-center">
         <div className="flex flex-col gap-6 items-center">
           <Typography className="max-w-2xl" variant="h1">
@@ -205,19 +245,10 @@ export default function Home() {
             Entre em Contato
           </Typography>
           <div>Agende uma demonstração ou entre em contato conosco para mais informações</div>
-          <Link
-            href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio"
-            target="_blank"
-          >
+          <Link href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio" target="_blank">
             <Button size="tiny" variant="ghost">
-              <Image
-                src="/whatsapp-logo.png"
-                alt="WhatsApp Logo"
-                width={20}
-                height={20}
-                className="mr-2"
-              />
-              {`Agende Agora`}
+              <Image src="/whatsapp-logo.png" alt="WhatsApp Logo" width={20} height={20} className="mr-2" />
+              Agende Agora
             </Button>
           </Link>
         </div>
