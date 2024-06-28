@@ -166,7 +166,7 @@ export default function Home() {
       {/* Seção de Depoimentos */}
       <div className="flex flex-col gap-6 items-center">
         <Typography className="max-w-2xl" variant="h1">
-          Casos de Sucesso
+          Parceiros
         </Typography>
         <div className="flex flex-col md:flex-row gap-6 items-center">
           <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
@@ -184,7 +184,7 @@ export default function Home() {
         <Typography className="max-w-2xl" variant="h1">
           Perguntas Frequentes
         </Typography>
-        <div className="flex flex-col md:flex-row gap-6 items-center">
+        <div className="flex flex-col md:fFlex-row gap-6 items-center">
           <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
             <Typography variant="h3">Como funciona o período de teste?</Typography>
             <Typography variant="p">
