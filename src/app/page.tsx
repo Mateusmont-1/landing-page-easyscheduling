@@ -1,7 +1,6 @@
 import { Button } from '@/components/ui/button'
 import Typography from '@/components/ui/typography'
 import Image from 'next/image'
-import Feature from './feature'
 import { UserPlus, Calendar, Scissors, Box, DollarSign, MessageCircle } from 'lucide-react'
 import Link from 'next/link'
 
@@ -54,7 +53,7 @@ export default function Home() {
           <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
             <Typography variant="h3">Mensal</Typography>
             <Typography variant="h4">R$ 50 / mês</Typography>
-            <Typography variant="body1" className="text-sm">
+            <Typography variant="p" className="text-sm">
               *Sem limitações no número de colaboradores
             </Typography>
             <Link
@@ -67,7 +66,7 @@ export default function Home() {
           <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
             <Typography variant="h3">Anual</Typography>
             <Typography variant="h4">R$ 500 / ano</Typography>
-            <Typography variant="body1" className="text-sm">
+            <Typography variant="p" className="text-sm">
               *Sem limitações no número de colaboradores
             </Typography>
             <Link
@@ -88,28 +87,28 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-6 w-full">
           <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
             <Typography variant="h3">EasyScheduling</Typography>
-            <Typography variant="body1">
+            <Typography variant="p">
               Gestão completa de agendamentos, colaboradores, serviços, produtos e controle financeiro.
             </Typography>
-            <Typography variant="body1" className="text-sm">
+            <Typography variant="p" className="text-sm">
               *Sem limitações no número de colaboradores
             </Typography>
           </div>
           <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
             <Typography variant="h3">AppBarber</Typography>
-            <Typography variant="body1">
+            <Typography variant="p">
               Focado em barbearias com gestão de agendamentos e colaboradores.
             </Typography>
-            <Typography variant="body1" className="text-sm">
+            <Typography variant="p" className="text-sm">
               *Limitação de até 10 colaboradores
             </Typography>
           </div>
           <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
             <Typography variant="h3">Outro Sistema</Typography>
-            <Typography variant="body1">
+            <Typography variant="p">
               Funcionalidades limitadas, focado em agendamentos simples.
             </Typography>
-            <Typography variant="body1" className="text-sm">
+            <Typography variant="p" className="text-sm">
               *Limitação de até 5 colaboradores
             </Typography>
           </div>
@@ -121,7 +120,7 @@ export default function Home() {
         <Typography className="max-w-2xl" variant="h1">
           Funcionalidades Principais
         </Typography>
-        <Typography className="max-w-2xl" variant="body1">
+        <Typography className="max-w-2xl" variant="p">
           Nosso sistema possui diversas funcionalidades que atendem a necessidade de qualquer estabelecimento que trabalha com agendamento.
         </Typography>
         <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -130,7 +129,7 @@ export default function Home() {
               <UserPlus size={24} />
             </div>
             <Typography variant="h3">Gestão de Usuários</Typography>
-            <Typography variant="body1">
+            <Typography variant="p">
               Cadastro de usuários com autenticação Google, nome e telefone no Firestore.
             </Typography>
           </div>
@@ -139,7 +138,7 @@ export default function Home() {
               <Calendar size={24} />
             </div>
             <Typography variant="h3">Gerenciamento de Agendamentos</Typography>
-            <Typography variant="body1">
+            <Typography variant="p">
               Criação, edição, cancelamento de agendamentos e envio de notificações via WhatsApp.
             </Typography>
           </div>
@@ -148,7 +147,7 @@ export default function Home() {
               <Scissors size={24} />
             </div>
             <Typography variant="h3">Gerenciamento de Colaboradores</Typography>
-            <Typography variant="body1">
+            <Typography variant="p">
               Cadastro, edição, gerenciamento de folgas e verificação de disponibilidade dos colaboradores.
             </Typography>
           </div>
@@ -157,7 +156,7 @@ export default function Home() {
               <Box size={24} />
             </div>
             <Typography variant="h3">Gestão de Serviços e Produtos</Typography>
-            <Typography variant="body1">
+            <Typography variant="p">
               Adicionar e editar serviços e produtos disponíveis para agendamento e venda.
             </Typography>
           </div>
@@ -166,7 +165,7 @@ export default function Home() {
               <DollarSign size={24} />
             </div>
             <Typography variant="h3">Controle Financeiro</Typography>
-            <Typography variant="body1">
+            <Typography variant="p">
               Verificação de saldos diários, semanais e mensais, controle de despesas e categorias.
             </Typography>
           </div>
@@ -175,7 +174,7 @@ export default function Home() {
               <MessageCircle size={24} />
             </div>
             <Typography variant="h3">Notificações Automatizadas</Typography>
-            <Typography variant="body1">
+            <Typography variant="p">
               Envio de mensagens via WhatsApp para confirmações e atualizações de agendamentos.
             </Typography>
           </div>
@@ -187,7 +186,7 @@ export default function Home() {
           <Typography className="max-w-2xl" variant="h1">
             Configuração Instantânea
           </Typography>
-          <Typography className="max-w-2xl" variant="body1">
+          <Typography className="max-w-2xl" variant="p">
             Configure rapidamente seu sistema de agendamento sem necessidade de código personalizado.
           </Typography>
           <div className="w-full">
