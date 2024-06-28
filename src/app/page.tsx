@@ -184,14 +184,14 @@ export default function Home() {
         <Typography className="max-w-2xl" variant="h1">
           Perguntas Frequentes
         </Typography>
-        <div className="flex flex-col md:fFlex-row gap-6 items-center">
-          <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
+        <div className="flex flex-col md:flex-row gap-6 items-center w-full">
+          <div className="flex flex-col gap-3 items-center p-6 border rounded-lg w-full md:w-1/2">
             <Typography variant="h3">Como funciona o período de teste?</Typography>
             <Typography variant="p">
               Oferecemos um período de teste de 14 dias para você experimentar todas as funcionalidades do sistema.
             </Typography>
           </div>
-          <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
+          <div className="flex flex-col gap-3 items-center p-6 border rounded-lg w-full md:w-1/2">
             <Typography variant="h3">Posso cancelar a qualquer momento?</Typography>
             <Typography variant="p">
               Sim, você pode cancelar sua assinatura a qualquer momento sem nenhum custo adicional.
