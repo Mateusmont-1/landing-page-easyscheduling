@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -25,7 +24,7 @@
     --input: 240 5.9% 90%;
     --ring: 240 5.9% 10%;
     --radius: 0.5rem;
-    --minor: 0 0% 15%
+    --minor: 0 0% 15%;
   }
 
   .dark {
@@ -75,4 +74,52 @@
 .image-full {
   width: 100%;
   height: auto;
+}
+
+.custom-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
+}
+
+/* Media queries para ajustar o estilo em diferentes tamanhos de tela */
+@media (min-width: 1024px) {
+  .custom-image {
+    width: 1024px;
+    height: 632px;
+  }
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
+}
+/* Media queries para ajustar o estilo em diferentes tamanhos de tela */
+@media (max-width: 768px) {
+  .responsive-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Estiliza as setas de navegação do Swiper */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000000; /* Altere para a cor desejada */
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 40px; /* Ajuste o tamanho das setas, se necessário */
+}
+
+/* Estiliza os bullets da paginação */
+.swiper-pagination-bullet {
+  background-color: #000000; /* Altere para a cor desejada */
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff; /* Altere para a cor desejada para o bullet ativo */
 }
