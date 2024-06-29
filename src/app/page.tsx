@@ -75,6 +75,36 @@ export default function Home() {
               unoptimized={true} // Desativa a otimização para este GIF
             />
           </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              width={1024}
+              height={632}
+              alt="Imagem do Sistema de Agendamento"
+              src="/sistema3.gif"
+              className="responsive-image" // Adicione uma classe CSS personalizada
+              unoptimized={true} // Desativa a otimização para este GIF
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              width={1024}
+              height={632}
+              alt="Imagem do Sistema de Agendamento"
+              src="/sistema4.gif"
+              className="responsive-image" // Adicione uma classe CSS personalizada
+              unoptimized={true} // Desativa a otimização para este GIF
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              width={1024}
+              height={632}
+              alt="Imagem do Sistema de Agendamento"
+              src="/sistema5.gif"
+              className="responsive-image" // Adicione uma classe CSS personalizada
+              unoptimized={true} // Desativa a otimização para este GIF
+            />
+          </SwiperSlide>
         </Swiper>
       </div>
       {/* Seção de Preços */}
@@ -119,7 +149,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* Seção de Comparação */}
       <div className="flex flex-col gap-6 items-center">
         <Typography className="max-w-2xl" variant="h1">
@@ -388,6 +417,36 @@ export default function Home() {
               height={632}
               alt="Imagem do Sistema de Agendamento"
               src="/configuracao2.gif"
+              className="responsive-image" // Adicione uma classe CSS personalizada
+              unoptimized={true} // Desativa a otimização para este GIF
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              width={1024}
+              height={632}
+              alt="Imagem do Sistema de Agendamento"
+              src="/configuracao3.gif"
+              className="responsive-image" // Adicione uma classe CSS personalizada
+              unoptimized={true} // Desativa a otimização para este GIF
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              width={1024}
+              height={632}
+              alt="Imagem do Sistema de Agendamento"
+              src="/configuracao4.gif"
+              className="responsive-image" // Adicione uma classe CSS personalizada
+              unoptimized={true} // Desativa a otimização para este GIF
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <Image
+              width={1024}
+              height={632}
+              alt="Imagem do Sistema de Agendamento"
+              src="/configuracao5.gif"
               className="responsive-image" // Adicione uma classe CSS personalizada
               unoptimized={true} // Desativa a otimização para este GIF
             />
