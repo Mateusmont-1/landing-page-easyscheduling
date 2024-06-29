@@ -16,7 +16,7 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import { Navigation, Pagination } from 'swiper/modules'
-import './globals.css' // Importe o arquivo CSS com as regras personalizadas
+import '@/app/globals.css' // Importe o arquivo CSS com as regras personalizadas
 
 export default function Home() {
   return (
