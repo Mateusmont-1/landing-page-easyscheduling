@@ -15,9 +15,11 @@ export const metadata: Metadata = {
   keywords:
     'sistema de agendamento, controle financeiro, gestão de negócios, agendamentos online, software para salões de beleza',
   authors: [
-    { name: 'Mateus Monteiro dos Santos - Github : Mateusmont-1' }],
-  publisher: 
-    'EasyScheduling',
+    {
+      name: 'Mateus Monteiro dos Santos - Github : Mateusmont-1'
+    }
+  ],
+  publisher: 'EasyScheduling',
   openGraph: {
     title:
       'EasyScheduling - Sistema de Agendamento e Controle de Negócios',

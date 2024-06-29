@@ -28,7 +28,7 @@ export default function Home() {
         <Typography className="max-w-2xl" variant="h1">
           Sistema de Agendamento e Controle de Negócios
         </Typography>
-        <Typography className="max-w-2xl" variant="h5">
+        <Typography className="max-w-2xl" variant="h2">
           Otimize a gestão de agendamentos, colaboradores,
           serviços, produtos e controle financeiro com nosso
           sistema.

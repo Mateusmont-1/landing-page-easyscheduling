@@ -33,7 +33,7 @@ export function Header({ className }: SidebarProps) {
 
   const getLogo = () => (
     <Link href="/" className="pointer flex items-center">
-      <img src="/icon1.png" className="mr-3" />
+      <img src="/icon1.png" alt='Semi-logo' className="mr-3" />
       <Typography className="!text-white !text-base font-medium ">
         EasyScheduling
       </Typography>
