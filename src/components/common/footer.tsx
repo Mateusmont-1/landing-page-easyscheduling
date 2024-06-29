@@ -14,7 +14,11 @@ export function Footer() {
             href="/"
             className="pointer flex items-center"
           >
-            <img src="/icon1.png" alt='Semi-logo' className="mr-3" />
+            <img
+              src="/icon1.png"
+              alt="Semi-logo"
+              className="mr-3"
+            />
             <Typography className="!text-white !text-base font-medium ">
               EasyScheduling
             </Typography>
