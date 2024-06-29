@@ -5,7 +5,6 @@ import { Header } from '@/components/common/header'
 import { Footer } from '@/components/common/footer'
 import { Analytics } from '@vercel/analytics/react'
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
