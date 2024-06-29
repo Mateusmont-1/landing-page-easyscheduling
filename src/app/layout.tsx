@@ -8,45 +8,29 @@ import { Analytics } from '@vercel/analytics/react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title:
-    'EasyScheduling - Sistema de Agendamento e Controle de Negócios',
-  description:
-    'Otimize a gestão de agendamentos, colaboradores, serviços, produtos e controle financeiro com nosso sistema.',
+  title: 'EasyScheduling - Sistema de Agendamento e Controle de Negócios',
+  description: 'Otimize a gestão de agendamentos, colaboradores, serviços, produtos e controle financeiro com nosso sistema.',
+  keywords: 'sistema de agendamento, controle financeiro, gestão de negócios, agendamentos online, software para salões de beleza',
   openGraph: {
-    images: '/icon1.png'
+    title: 'EasyScheduling - Sistema de Agendamento e Controle de Negócios',
+    description: 'Otimize a gestão de agendamentos, colaboradores, serviços, produtos e controle financeiro com nosso sistema.',
+    images: ['/icon1.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title:
-      'EasyScheduling - Sistema de Agendamento e Controle de Negócios',
-    description:
-      'Otimize a gestão de agendamentos, colaboradores, serviços, produtos e controle financeiro com nosso sistema.',
-    images: ['https://i.imgur.com/NJ1OJ4h.png']
-  }
+    title: 'EasyScheduling - Sistema de Agendamento e Controle de Negócios',
+    description: 'Otimize a gestão de agendamentos, colaboradores, serviços, produtos e controle financeiro com nosso sistema.',
+    images: ['https://i.imgur.com/NJ1OJ4h.png'],
+  },
 }
 
-export default function RootLayout({
-  children
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="pt-BR"
-      suppressHydrationWarning
-      className="antialiased"
-    >
+    <html lang="pt-BR" suppressHydrationWarning className="antialiased">
       <Analytics />
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <main
-            className={`flex min-h-screen flex-col ${inter.className}`}
-          >
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
+          <main className={`flex min-h-screen flex-col ${inter.className}`}>
             <Header />
             <div className="flex flex-1 justify-center w-full">
               <div className="flex w-full max-w-[1280px] h-full">
