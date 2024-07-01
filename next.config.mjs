@@ -5,12 +5,11 @@ const nextConfig = {
     missingSuspenseWithCSRBailout: false
   },
   images: {
-    domains: [
-      'scontent.fyzd1-3.fna.fbcdn.net',
-      'instagram.fyto1-2.fna.fbcdn.net',
-      'assets.vogue.com',
-      'm.media-amazon.com',
-      'upload.wikimedia.org'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+      }
     ]
   }
 }
