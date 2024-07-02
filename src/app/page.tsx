@@ -1,3 +1,5 @@
+// page.tsx
+
 'use client'
 import React, { Suspense, lazy, useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -9,6 +11,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import LiteYouTubeEmbed from 'react-lite-youtube-embed'
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import '@/app/globals.css'
 
 const FeatureSection = lazy(async () => await import('@/components/FeatureSection'))
@@ -16,15 +20,15 @@ const ComparisonSection = lazy(async () => await import('@/components/Comparison
 const PricePlans = lazy(async () => await import('@/components/PricePlans'))
 
 const videoLinks = [
-  'https://www.youtube.com/embed/ynQ2A64E5TQ',
-  'https://www.youtube.com/embed/xKHFgVONyhk',
-  'https://www.youtube.com/embed/CtN1Tn4VDAk',
-  'https://www.youtube.com/embed/QmiOfpLZR2k',
-  'https://www.youtube.com/embed/PtLgR_vWwqQ'
+  'ynQ2A64E5TQ',
+  'xKHFgVONyhk',
+  'CtN1Tn4VDAk',
+  'QmiOfpLZR2k',
+  'PtLgR_vWwqQ'
 ]
 
 export default function Home() {
-  const [mainVideo, setMainVideo] = useState(videoLinks[0]);
+  const [mainVideo, setMainVideo] = useState(videoLinks[0])
 
   return (
     <div className="flex flex-col h-full md:py-36 md:px-32 pt-11 pb-24 px-8 w-full items-center text-center gap-12">
@@ -33,7 +37,9 @@ export default function Home() {
           Sistema de Agendamento e Controle de Negócios
         </Typography>
         <Typography className="max-w-2xl" variant="h2">
-          Otimize a gestão de agendamentos, colaboradores, serviços, produtos e controle financeiro com nosso sistema.
+          Otimize a gestão de agendamentos, colaboradores,
+          serviços, produtos e controle financeiro com nosso
+          sistema.
         </Typography>
         <Link href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio" target="_blank">
           <Button variant="ghost" className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg">
@@ -46,22 +52,26 @@ export default function Home() {
         <Typography className="max-w-2xl" variant="h1">
           Veja como nosso sistema funciona
         </Typography>
-        <iframe 
-          width="560" 
-          height="315" 
-          src={mainVideo} 
-          title="YouTube video player" 
-          frameBorder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowFullScreen
-          className="custom-video responsive-video w-full max-w-2xl"
-        ></iframe>
+        <div className="custom-video responsive-video w-full max-w-2xl">
+          <LiteYouTubeEmbed
+            id={mainVideo}
+            title="YouTube video player"
+            adNetwork={true}
+            params="autoplay=0&rel=0"
+          />
+        </div>
         <div className="flex gap-4 mt-4">
           {videoLinks.map((link, index) => (
-            <button key={index} onClick={() => { setMainVideo(link); }} className="focus:outline-none">
-              <img 
-                src={`https://img.youtube.com/vi/${link.split('/')[4]}/0.jpg`} 
-                alt={`Thumbnail ${index + 1}`} 
+            <button
+              key={index}
+              onClick={() => {
+                setMainVideo(link)
+              }}
+              className="focus:outline-none"
+            >
+              <img
+                src={`https://img.youtube.com/vi/${link}/0.jpg`}
+                alt={`Thumbnail ${index + 1}`}
                 className="thumbnail border-2 border-transparent hover:border-blue-500"
               />
             </button>
