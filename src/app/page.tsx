@@ -58,7 +58,7 @@ export default function Home() {
         ></iframe>
         <div className="flex gap-4 mt-4">
           {videoLinks.map((link, index) => (
-            <button key={index} onClick={() => setMainVideo(link)} className="focus:outline-none">
+            <button key={index} onClick={() => { setMainVideo(link); }} className="focus:outline-none">
               <img 
                 src={`https://img.youtube.com/vi/${link.split('/')[4]}/0.jpg`} 
                 alt={`Thumbnail ${index + 1}`} 
