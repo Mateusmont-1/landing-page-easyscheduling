@@ -1,22 +1,25 @@
-import Typography from '@/components/ui/typography';
+import Typography from '@/components/ui/typography'
 
 const comparisons = [
   {
     name: 'EasyScheduling',
-    description: 'Gestão completa de agendamentos, colaboradores, serviços, produtos e controle financeiro.',
+    description:
+      'Gestão completa de agendamentos, colaboradores, serviços, produtos e controle financeiro.',
     note: '*Sem limitações no número de colaboradores'
   },
   {
     name: 'AppBarber',
-    description: 'Focado em barbearias com gestão de agendamentos e colaboradores.',
+    description:
+      'Focado em barbearias com gestão de agendamentos e colaboradores.',
     note: '*Limitação de até 10 colaboradores'
   },
   {
     name: 'Outro Sistema',
-    description: 'Funcionalidades limitadas, focado em agendamentos simples.',
+    description:
+      'Funcionalidades limitadas, focado em agendamentos simples.',
     note: '*Limitação de até 5 colaboradores'
   }
-];
+]
 
 export default function ComparisonSection() {
   return (
@@ -25,14 +28,23 @@ export default function ComparisonSection() {
         Comparação com Outros Sistemas
       </Typography>
       <div className="grid md:grid-cols-3 gap-6 w-full">
-        {comparisons.map(({ name, description, note }, index) => (
-          <div key={index} className="flex flex-col gap-3 items-center p-6 border rounded-lg">
-            <Typography variant="h3">{name}</Typography>
-            <Typography variant="p">{description}</Typography>
-            <Typography variant="p" className="text-sm">{note}</Typography>
-          </div>
-        ))}
+        {comparisons.map(
+          ({ name, description, note }, index) => (
+            <div
+              key={index}
+              className="flex flex-col gap-3 items-center p-6 border rounded-lg"
+            >
+              <Typography variant="h3">{name}</Typography>
+              <Typography variant="p">
+                {description}
+              </Typography>
+              <Typography variant="p" className="text-sm">
+                {note}
+              </Typography>
+            </div>
+          )
+        )}
       </div>
     </div>
-  );
+  )
 }
