@@ -168,14 +168,4 @@
   font-size: 40px; /* Ajuste o tamanho das setas, se necessário */
 }
 
-/* Estiliza os bullets da paginação */
-.swiper-pagination-bullet {
-  background-color: #000000; /* Altere para a cor desejada */
-  opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #ffffff; /* Altere para a cor desejada para o bullet ativo */
-}
-
 

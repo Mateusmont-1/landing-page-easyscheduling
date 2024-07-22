@@ -129,12 +129,23 @@ export default function Home() {
         </Typography>
         <div className="flex flex-col md:flex-row gap-6 items-center">
           <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
-            <Image src="/logo_felipe_lima.png" alt="Cliente 1" width={100} height={100} className="rounded-full" />
+            <Image
+              src="/logo_felipe_lima.png"
+              alt="Felipe Lima Barbearia"
+              width={100}
+              height={100}
+              className="rounded-full"
+            />
             <Typography variant="h3">
               Felipe Lima Barbearia
             </Typography>
-            <Typography variant="p">
-              &quot;A interface é intuitiva e fácil de usar. Perfeito para a minha Barbearia.&quot;
+            <Typography variant="p" className="text-center">
+              A interface é intuitiva e fácil de usar.
+              Possibilitou organizar os cortes realizados
+              sem necessidade de papel. Consigo visualizar
+              meus ganhos brutos diários, semanais e mensais
+              com facilidade. E Tudo na palma da mão, a
+              qualquer hora.
             </Typography>
           </div>
         </div>
