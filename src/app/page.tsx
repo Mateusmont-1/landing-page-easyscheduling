@@ -15,9 +15,15 @@ import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 import '@/app/globals.css'
 
-const FeatureSection = lazy(async () => await import('@/components/FeatureSection'))
-const ComparisonSection = lazy(async () => await import('@/components/ComparisonSection'))
-const PricePlans = lazy(async () => await import('@/components/PricePlans'))
+const FeatureSection = lazy(
+  async () => await import('@/components/FeatureSection')
+)
+const ComparisonSection = lazy(
+  async () => await import('@/components/ComparisonSection')
+)
+const PricePlans = lazy(
+  async () => await import('@/components/PricePlans')
+)
 
 const videoLinks = [
   'ynQ2A64E5TQ',
@@ -31,7 +37,10 @@ export default function Home() {
   const [mainVideo, setMainVideo] = useState(videoLinks[0])
 
   return (
-    <div className="flex flex-col h-full md:py-36 md:px-32 pt-11 pb-24 px-8 w-full items-center text-center gap-12">
+    <div
+      className="flex flex-col h-full md:py-36 md:px-32 pt-11 pb-24 px-8
+        w-full items-center text-center gap-12"
+    >
       <div className="flex flex-col gap-6 items-center">
         <Typography className="max-w-2xl" variant="h1">
           Sistema de Agendamento e Controle de Negócios
@@ -41,9 +50,21 @@ export default function Home() {
           serviços, produtos e controle financeiro com nosso
           sistema.
         </Typography>
-        <Link href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio" target="_blank">
-          <Button variant="ghost" className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg">
-            <Image src="/whatsapp-logo.png" alt="WhatsApp Logo" width={20} height={20} className="mr-2" />
+        <Link
+          href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio"
+          target="_blank"
+        >
+          <Button
+            variant="ghost"
+            className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg"
+          >
+            <Image
+              src="/whatsapp-logo.png"
+              alt="WhatsApp Logo"
+              width={20}
+              height={20}
+              className="mr-2"
+            />
             Comece Agora
           </Button>
         </Link>
@@ -83,14 +104,35 @@ export default function Home() {
           Visualize Nossos Diferentes Layouts
         </Typography>
         <Typography className="max-w-2xl" variant="p">
-          Veja como o EasyScheduling se adapta ao estilo do seu negócio com diferentes opções de coloração, atendendo à paleta de cores do seu estabelecimento.
+          Veja como o EasyScheduling se adapta ao estilo do
+          seu negócio com diferentes opções de coloração,
+          atendendo à paleta de cores do seu
+          estabelecimento.
         </Typography>
       </div>
       <div className="custom-image">
-        <Swiper modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }}>
-          {['/sistema.webp', '/sistema2.webp', '/sistema3.webp', '/sistema4.webp', '/sistema5.webp'].map((src, index) => (
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation
+          pagination={{ clickable: true }}
+        >
+          {[
+            '/sistema.webp',
+            '/sistema2.webp',
+            '/sistema3.webp',
+            '/sistema4.webp',
+            '/sistema5.webp'
+          ].map((src, index) => (
             <SwiperSlide key={index}>
-              <Image width={1024} height={632} alt={`Imagem do sistema Easyscheduling ${index + 1}`} src={src} className="responsive-image" unoptimized loading="lazy" />
+              <Image
+                width={1024}
+                height={632}
+                alt={`Imagem do sistema Easyscheduling ${index + 1}`}
+                src={src}
+                className="responsive-image"
+                unoptimized
+                loading="lazy"
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -110,7 +152,8 @@ export default function Home() {
               Facilidade de Uso
             </Typography>
             <Typography variant="p">
-              Interface intuitiva e fácil de usar, sem necessidade de treinamento avançado.
+              Interface intuitiva e fácil de usar, sem
+              necessidade de treinamento avançado.
             </Typography>
           </div>
           <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
@@ -118,7 +161,8 @@ export default function Home() {
               Suporte ao Cliente
             </Typography>
             <Typography variant="p">
-              Suporte dedicado para ajudar você em qualquer momento.
+              Suporte dedicado para ajudar você em qualquer
+              momento.
             </Typography>
           </div>
         </div>
@@ -158,14 +202,21 @@ export default function Home() {
           {[
             {
               question: 'Como funciona o período de teste?',
-              answer: 'Oferecemos um período de teste de 14 dias para você experimentar todas as funcionalidades do sistema.'
+              answer:
+                'Oferecemos um período de teste de 14 dias para você experimentar todas as funcionalidades do sistema.'
             },
             {
-              question: 'Posso cancelar a qualquer momento?',
-              answer: 'Sim, você pode cancelar sua assinatura a qualquer momento sem nenhum custo adicional.'
+              question:
+                'Posso cancelar a qualquer momento?',
+              answer:
+                'Sim, você pode cancelar sua assinatura a qualquer momento sem nenhum custo adicional.'
             }
           ].map(({ question, answer }, index) => (
-            <div key={index} className="flex flex-col gap-3 items-center p-6 border rounded-lg w-full md:w-1/2">
+            <div
+              key={index}
+              className="flex flex-col gap-3 items-center p-6 border rounded-lg
+                w-full md:w-1/2"
+            >
               <Typography variant="h3">
                 {question}
               </Typography>
@@ -180,15 +231,34 @@ export default function Home() {
             Configuração Instantânea
           </Typography>
           <Typography className="max-w-2xl" variant="p">
-            Configure rapidamente seu sistema de agendamento sem necessidade de código personalizado.
+            Configure rapidamente seu sistema de agendamento
+            sem necessidade de código personalizado.
           </Typography>
         </div>
       </div>
       <div className="custom-image">
-        <Swiper modules={[Navigation, Pagination]} navigation pagination={{ clickable: true }}>
-          {['/configuracao.webp', '/configuracao2.webp', '/configuracao3.webp', '/configuracao4.webp', '/configuracao5.webp'].map((src, index) => (
+        <Swiper
+          modules={[Navigation, Pagination]}
+          navigation
+          pagination={{ clickable: true }}
+        >
+          {[
+            '/configuracao.webp',
+            '/configuracao2.webp',
+            '/configuracao3.webp',
+            '/configuracao4.webp',
+            '/configuracao5.webp'
+          ].map((src, index) => (
             <SwiperSlide key={index}>
-              <Image width={1024} height={632} alt={`Imagem do sistema Easyscheduling ${index + 1}`} src={src} className="responsive-image" unoptimized loading="lazy" />
+              <Image
+                width={1024}
+                height={632}
+                alt={`Imagem do sistema Easyscheduling ${index + 1}`}
+                src={src}
+                className="responsive-image"
+                unoptimized
+                loading="lazy"
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -199,16 +269,29 @@ export default function Home() {
             Entre em Contato
           </Typography>
           <div>
-            Agende uma demonstração ou entre em contato conosco para mais informações
+            Agende uma demonstração ou entre em contato
+            conosco para mais informações
           </div>
-          <Link href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio" target="_blank">
-            <Button variant="ghost" className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg">
-              <Image src="/whatsapp-logo.png" alt="WhatsApp Logo" width={20} height={20} className="mr-2" />
+          <Link
+            href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio"
+            target="_blank"
+          >
+            <Button
+              variant="ghost"
+              className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg"
+            >
+              <Image
+                src="/whatsapp-logo.png"
+                alt="WhatsApp Logo"
+                width={20}
+                height={20}
+                className="mr-2"
+              />
               Entre em Contato
             </Button>
           </Link>
         </div>
       </div>
     </div>
-  );
+  )
 }
