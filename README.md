@@ -22,6 +22,7 @@ npm run dev
 Abra http://localhost:3000 no seu navegador para ver o resultado.
 
 Para rodar o projeto via docker, siga os passos abaixo:
+
 ```bash
 docker-compose up
 ```
@@ -36,4 +37,5 @@ O projeto ficará disponível na porta 3001. Abra http://localhost:3001 no seu n
 - **Docker Compose**: Para orquestração de containers Docker.
 
 ## Créditos
+
 - Este projeto foi baseado no [saas-landingpage](https://github.com/AtotheY/saas-landingpage) criado por [Anthony Sistilli](https://github.com/AtotheY).
