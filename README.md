@@ -4,7 +4,7 @@ Bem-vindo à landing page do EasyScheduling. Este repositório contém o código
 
 ## Introdução
 
-A landing page foi criada para demonstrar nosso sistema web EasyScheduling e captar novos clientes.
+A landing page foi criada para demonstrar o sistema web EasyScheduling e captar novos clientes.
 
 ![Pré-visualização](public/page.png)
 
