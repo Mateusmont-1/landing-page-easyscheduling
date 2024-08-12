@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button'
 import Typography from '@/components/ui/typography'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const plans = [
   {
@@ -76,6 +77,13 @@ export default function PricePlans() {
               </Typography>
               <Link href={link} target="_blank">
                 <Button size="tiny" variant="ghost">
+                  <Image
+                  src="/whatsapp-logo.png"
+                  alt="WhatsApp Logo"
+                  width={20}
+                  height={20}
+                  className="mr-2"
+                />
                   Comece Agora
                 </Button>
               </Link>
