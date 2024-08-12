@@ -26,23 +26,35 @@ export default function PricePlans() {
       <Typography className="max-w-2xl" variant="h1">
         Planos de Preços
       </Typography>
-      <Typography className="max-w-2xl" variant="h2" color="red">
+      <Typography
+        className="max-w-2xl"
+        variant="h2"
+        color="red"
+      >
         Preço Promocional! Aproveite antes que acabe!
       </Typography>
       <div className="flex flex-col md:flex-row gap-6 items-center">
         {plans.map(
           (
-            { plan, originalPrice, discountedPrice, note, link, highlight },
+            {
+              plan,
+              originalPrice,
+              discountedPrice,
+              note,
+              link,
+              highlight
+            },
             index
           ) => (
             <div
               key={index}
-              className={`flex flex-col gap-3 items-center p-6 border rounded-lg flex-1 ${
+              className={`flex flex-col gap-3 items-center p-6 border rounded-lg
+              flex-1 ${
                 highlight
-                  ? 'bg-[#2a2a2a] border-[#4a4a4a]' // Destaque cinza claro
+                  ? 'bg-[#2a2a2a] border-[#4a4a4a]'
                   : 'bg-black border-gray-600'
               }`}
-              style={{ minHeight: '290px' }} // Altura mínima
+              style={{ minHeight: '300px' }} // Altura mínima
             >
               {highlight && (
                 <div className="bg-[#4a4a4a] text-white px-3 py-1 rounded-full">
@@ -50,7 +62,10 @@ export default function PricePlans() {
                 </div>
               )}
               <Typography variant="h3">{plan}</Typography>
-              <Typography variant="h4" className="line-through text-gray-500">
+              <Typography
+                variant="h4"
+                className="line-through text-gray-500"
+              >
                 {originalPrice}
               </Typography>
               <Typography variant="h4" color="green">
