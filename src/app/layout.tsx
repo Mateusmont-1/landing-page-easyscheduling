@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@/providers/theme-provider'
 import { Header } from '@/components/common/header'
 import { Footer } from '@/components/common/footer'
-import { Analytics } from '@vercel/analytics/react'
+import '@/app/globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -49,7 +49,22 @@ export default function RootLayout({
       suppressHydrationWarning
       className="antialiased"
     >
-      <Analytics />
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-BPVWD9S99B"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-BPVWD9S99B');
+            `
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

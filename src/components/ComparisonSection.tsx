@@ -14,7 +14,7 @@ const comparisons = [
     note: '*Limitação de até 10 colaboradores'
   },
   {
-    name: 'Outro Sistema',
+    name: 'Outros Sistemas',
     description:
       'Funcionalidades limitadas, focado em agendamentos simples.',
     note: '*Limitação de até 5 colaboradores'

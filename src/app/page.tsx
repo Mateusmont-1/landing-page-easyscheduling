@@ -1,5 +1,3 @@
-// page.tsx
-
 'use client'
 import React, { Suspense, lazy, useState } from 'react'
 import { Button } from '@/components/ui/button'
@@ -13,7 +11,6 @@ import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import LiteYouTubeEmbed from 'react-lite-youtube-embed'
 import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
-import '@/app/globals.css'
 
 const FeatureSection = lazy(
   async () => await import('@/components/FeatureSection')
@@ -50,25 +47,10 @@ export default function Home() {
           serviços, produtos e controle financeiro com nosso
           sistema.
         </Typography>
-        <Link
-          href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio"
-          target="_blank"
-        >
-          <Button
-            variant="ghost"
-            className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg"
-          >
-            <Image
-              src="/whatsapp-logo.png"
-              alt="WhatsApp Logo"
-              width={20}
-              height={20}
-              className="mr-2"
-            />
-            Comece Agora
-          </Button>
-        </Link>
       </div>
+
+      <div className="w-full border-b border-gray-700 my-8"></div>
+
       <div className="flex flex-col items-center gap-6 mt-8">
         <Typography className="max-w-2xl" variant="h1">
           Veja como nosso sistema funciona
@@ -99,6 +81,9 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      <div className="w-full border-b border-gray-700 my-8"></div>
+
       <div className="flex flex-col items-center gap-6 mt-8">
         <Typography className="max-w-2xl" variant="h1">
           Visualize Nossos Diferentes Layouts
@@ -137,11 +122,17 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
+
+      <div className="w-full border-b border-gray-700 my-8"></div>
+
       <Suspense fallback={<div>Loading...</div>}>
         <FeatureSection />
         <ComparisonSection />
         <PricePlans />
       </Suspense>
+
+      <div className="w-full border-b border-gray-700 my-8"></div>
+
       <div className="flex flex-col gap-6 items-center">
         <Typography className="max-w-2xl" variant="h1">
           Por que escolher nosso sistema?
@@ -167,6 +158,40 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className="w-full border-b border-gray-700 my-8"></div>
+
+      <div className="flex flex-col gap-6 items-center mt-12">
+        <Typography className="max-w-2xl" variant="h1">
+          Pronto para Começar?
+        </Typography>
+        <Typography variant="p">
+          Experimente agora e veja como nosso sistema pode
+          transformar seu negócio.
+        </Typography>
+        <Link
+          href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio"
+          target="_blank"
+        >
+          <Button
+            variant="ghost"
+            className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg
+              btn-cta"
+          >
+            <Image
+              src="/whatsapp-logo.png"
+              alt="WhatsApp Logo"
+              width={20}
+              height={20}
+              className="mr-2"
+            />
+            Comece Agora
+          </Button>
+        </Link>
+      </div>
+
+      <div className="w-full border-b border-gray-700 my-8"></div>
+
       <div className="flex flex-col gap-6 items-center">
         <Typography className="max-w-2xl" variant="h1">
           Parceiros
@@ -194,6 +219,9 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className="w-full border-b border-gray-700 my-8"></div>
+
       <div className="flex flex-col gap-6 items-center">
         <Typography className="max-w-2xl" variant="h1">
           Perguntas Frequentes
@@ -225,7 +253,10 @@ export default function Home() {
           ))}
         </div>
       </div>
-      <div className="flex flex-col md:pt-24 md:gap-36 gap-24 items-center">
+
+      <div className="w-full border-b border-gray-700 my-8"></div>
+
+      <div className="flex flex-col gap-6 items-center">
         <div className="flex flex-col gap-6 items-center">
           <Typography className="max-w-2xl" variant="h1">
             Configuração Instantânea
@@ -263,7 +294,10 @@ export default function Home() {
           ))}
         </Swiper>
       </div>
-      <div className="flex flex-col md:pt-24 md:gap-36 gap-24 items-center">
+
+      <div className="w-full border-b border-gray-700 my-8"></div>
+
+      <div className="flex flex-col gap-6 items-center">
         <div className="flex flex-col gap-6 items-center">
           <Typography className="max-w-2xl" variant="h1">
             Entre em Contato
@@ -278,7 +312,8 @@ export default function Home() {
           >
             <Button
               variant="ghost"
-              className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg"
+              className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg
+                btn-cta"
             >
               <Image
                 src="/whatsapp-logo.png"
