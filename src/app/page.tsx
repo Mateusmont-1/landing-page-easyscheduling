@@ -263,8 +263,8 @@ export default function Home() {
             Configuração Instantânea
           </Typography>
           <Typography className="max-w-2xl" variant="p">
-            Configure rapidamente seu sistema
-            sem necessidade de código personalizado.
+            Configure rapidamente seu sistema sem
+            necessidade de código personalizado.
           </Typography>
         </div>
       </div>

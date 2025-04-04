@@ -55,8 +55,10 @@ function FeatureSection() {
         Funcionalidades Principais
       </Typography>
       <Typography className="max-w-2xl" variant="p">
-      Nosso sistema oferece diversas funcionalidades projetadas para atender 
-      às demandas específicas do seu negócio, garantindo eficiência e praticidade em cada processo.
+        Nosso sistema oferece diversas funcionalidades
+        projetadas para atender às demandas específicas do
+        seu negócio, garantindo eficiência e praticidade em
+        cada processo.
       </Typography>
       <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-12">
         {features.map(

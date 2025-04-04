@@ -78,12 +78,12 @@ export default function PricePlans() {
               <Link href={link} target="_blank">
                 <Button size="tiny" variant="ghost">
                   <Image
-                  src="/whatsapp-logo.png"
-                  alt="WhatsApp Logo"
-                  width={20}
-                  height={20}
-                  className="mr-2"
-                />
+                    src="/whatsapp-logo.png"
+                    alt="WhatsApp Logo"
+                    width={20}
+                    height={20}
+                    className="mr-2"
+                  />
                   Comece Agora
                 </Button>
               </Link>
