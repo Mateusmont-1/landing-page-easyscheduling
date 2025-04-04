@@ -23,12 +23,12 @@ export function Header({ className }: SidebarProps) {
       href: 'https://easyscheduling.com.br/sistema_exemplo',
       title: 'Olhe um exemplo',
       openInNewTab: true
+    },
+    { href: '/free-trial', title: 'Teste Gratis' },
+    {
+      href: 'mailto:sistema.easyscheduling@gmail.com',
+      title: 'Contate-nos'
     }
-    // { href: '#pricing', title: 'Features' },
-    // {
-    //   href: 'mailto:myemail@.com',
-    //   title: 'Contact Us'
-    // }
   ]
 
   const getLogo = () => (

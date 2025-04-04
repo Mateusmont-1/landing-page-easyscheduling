@@ -5,7 +5,7 @@ const comparisons = [
     name: 'EasyScheduling',
     description:
       'Gestão completa de agendamentos, colaboradores, serviços, produtos e controle financeiro.',
-    note: '*Sem limitações no número de colaboradores'
+    note: '*Não possui limitações referente a colaboradores'
   },
   {
     name: 'AppBarber',

@@ -171,7 +171,7 @@ export default function Home() {
           transformar seu negócio.
         </Typography>
         <Link
-          href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio"
+          href="https://wa.me/5511940833832?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20meu%20estabelecimento"
           target="_blank"
         >
           <Button
@@ -232,7 +232,7 @@ export default function Home() {
             {
               question: 'Como funciona o período de teste?',
               answer:
-                'Oferecemos um período de teste de 14 dias para você experimentar todas as funcionalidades do sistema.'
+                'Oferecemos um período de teste de 7 dias para você experimentar todas as funcionalidades do sistema.'
             },
             {
               question:
@@ -263,7 +263,7 @@ export default function Home() {
             Configuração Instantânea
           </Typography>
           <Typography className="max-w-2xl" variant="p">
-            Configure rapidamente seu sistema de agendamento
+            Configure rapidamente seu sistema
             sem necessidade de código personalizado.
           </Typography>
         </div>
@@ -308,7 +308,7 @@ export default function Home() {
             conosco para mais informações
           </div>
           <Link
-            href="https://wa.me/5511948525402?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20negócio"
+            href="https://wa.me/5511940833832?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20meu%20estabelecimento"
             target="_blank"
           >
             <Button

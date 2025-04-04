@@ -7,16 +7,16 @@ const plans = [
   {
     plan: 'Mensal',
     originalPrice: 'R$ 50 / mês',
-    discountedPrice: 'R$ 35 / mês',
-    note: '*Sem limitações no número de colaboradores',
-    link: 'https://wa.me/5511948525402?text=Estou%20interessado%20no%20plano%20mensal%20do%20sistema%20EasyScheduling'
+    discountedPrice: 'R$ 30 / mês',
+    note: '*Sem limitações no sistema',
+    link: 'https://wa.me/5511940833832?text=Estou%20interessado%20no%20plano%20mensal%20do%20sistema%20EasyScheduling'
   },
   {
     plan: 'Anual',
     originalPrice: 'R$ 500 / ano',
-    discountedPrice: 'R$ 350 / ano',
-    note: '*Economize ao optar pelo plano anual!',
-    link: 'https://wa.me/5511948525402?text=Estou%20interessado%20no%20plano%20anual%20do%20sistema%20EasyScheduling',
+    discountedPrice: 'R$ 300 / ano',
+    note: '*Sem limitações no sistema',
+    link: 'https://wa.me/5511940833832?text=Estou%20interessado%20no%20plano%20anual%20do%20sistema%20EasyScheduling',
     highlight: true // Propriedade para destacar o plano anual
   }
 ]

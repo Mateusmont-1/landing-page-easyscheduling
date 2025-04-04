@@ -35,6 +35,14 @@ export function Footer() {
             </Typography>
           </Link>
           <Link
+            href="/free-trial"
+            className="pointer block w-fit flex-1"
+          >
+            <Typography variant="p" className="w-max">
+              Teste gratis
+            </Typography>
+          </Link>
+          <Link
             href="/terms-of-service"
             className="pointer block w-fit flex-1"
           >
@@ -54,7 +62,7 @@ export function Footer() {
       </div>
       <div className="w-full text-center mt-4">
         <Typography variant="p">
-          &copy; 2024 EasyScheduling. Todos os direitos
+          &copy; 2025 EasyScheduling. Todos os direitos
           reservados.
         </Typography>
       </div>
