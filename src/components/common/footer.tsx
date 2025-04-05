@@ -25,7 +25,7 @@ export function Footer() {
           </Link>
         </div>
         <div className="flex max-w-fit items-center gap-x-4">
-          <Link
+          {/* <Link
             href="https://easyscheduling.com.br/sistema_exemplo"
             target="_blank"
             className="pointer block w-fit flex-1"
@@ -33,7 +33,7 @@ export function Footer() {
             <Typography variant="p" className="w-max">
               Olhe um exemplo
             </Typography>
-          </Link>
+          </Link> */}
           <Link
             href="/free-trial"
             className="pointer block w-fit flex-1"

@@ -39,7 +39,7 @@ export default function Home() {
       className="flex flex-col h-full md:py-36 md:px-32 pt-11 pb-24 px-8
         w-full items-center text-center gap-12"
     >
-      <div className="flex flex-col gap-6 items-center">
+      {/* <div className="flex flex-col gap-6 items-center">
         <Typography className="max-w-2xl" variant="h1">
           Sistema de Agendamento e Controle de Negócios
         </Typography>
@@ -48,6 +48,47 @@ export default function Home() {
           serviços, produtos e controle financeiro com nosso
           sistema.
         </Typography>
+      </div> */}
+      {/* <div className="flex flex-col gap-3 items-center p-6 border rounded-lg">
+              <Typography className="max-w-3xl" variant="h1">
+              Você sente que está perdendo tempo (e dinheiro) tentando se organizar?
+              </Typography>
+            </div>
+      <div className="flex flex-col gap-6 items-center">
+              <Typography className="max-w-2xl" variant="h2">
+                Está difícil controlar o caixa, saber quanto entrou e saiu no dia ou organizar os horários dos clientes?
+              </Typography>
+              <Typography className="max-w-2xl text-lg text-gray-300">
+                O EasyScheduling foi criado para simplificar sua rotina: controle financeiro diário, agenda de clientes online e histórico de atendimentos. Tudo isso direto do seu celular.
+              </Typography>
+              <Link href="https://wa.me/5511940833832?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20meu%20estabelecimento" target="_blank">
+                <Button className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg rounded-xl">
+                  <Image src="/whatsapp-logo.png" alt="WhatsApp Logo" width={20} height={20} className="mr-2" />
+                  Quero Organizar Meu Negócio
+                </Button>
+              </Link>
+            </div> */}
+
+<div className="flex flex-col gap-3 items-center p-6 border border-[#4a4a4a] rounded-xl bg-[#2a2a2a] text-white max-w-3xl mx-auto">
+  <Typography className="max-w-3xl text-center" variant="h1">
+    Você sente que está perdendo tempo (e dinheiro) tentando se organizar?
+  </Typography>
+</div>
+
+      {/* CONTINUAÇÃO COM BENEFÍCIOS E CHAMADA */}
+      <div className="flex flex-col gap-6 items-center mt-6">
+        <Typography className="max-w-2xl" variant="h2">
+          Está difícil controlar o caixa, saber quanto entrou e saiu no dia ou organizar os horários dos clientes?
+        </Typography>
+        <Typography className="max-w-2xl text-lg text-gray-300">
+          O EasyScheduling foi criado para simplificar sua rotina: controle financeiro diário, agenda de clientes online e histórico de atendimentos. Tudo isso direto do seu celular.
+        </Typography>
+        <Link href="https://wa.me/5511940833832?text=Estou%20interessado%20no%20sistema%20EasyScheduling%20para%20o%20meu%20estabelecimento" target="_blank">
+          <Button className="bg-green-500 text-white hover:bg-green-600 py-3 px-6 text-lg rounded-xl flex items-center gap-2">
+            <Image src="/whatsapp-logo.png" alt="WhatsApp Logo" width={20} height={20} />
+            Quero Organizar Meu Negócio
+          </Button>
+        </Link>
       </div>
 
       <div className="w-full border-b border-gray-700 my-8"></div>
@@ -128,6 +169,22 @@ export default function Home() {
 
       <Suspense fallback={<div>Loading...</div>}>
         <FeatureSection />
+        <div className="bg-[#2a2a2a] border border-[#4a4a4a] rounded-xl p-8 flex flex-col items-center gap-4 max-w-3xl w-full mx-auto mt-16 text-white">
+        <div className="bg-[#4a4a4a] text-white px-3 py-1 rounded-full text-sm">
+          Experimente Sem Compromisso
+        </div>
+        <Typography variant="h2" className="text-white">
+          Faça um teste grátis por 7 dias
+        </Typography>
+        <Typography className="text-gray-300 text-center max-w-md">
+          Descubra como o EasyScheduling pode transformar a organização do seu negócio sem pagar nada agora.
+        </Typography>
+        <Link href="/free-trial">
+          <Button className="bg-white text-black font-semibold hover:bg-gray-100 px-6 py-3 rounded-lg">
+            Começar Teste Grátis
+          </Button>
+        </Link>
+        </div>
         <ComparisonSection />
         <PricePlans />
       </Suspense>

@@ -1,6 +1,7 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+
 
 export default function FreeTrialForm() {
   const [formData, setFormData] = useState({
@@ -23,22 +24,23 @@ export default function FreeTrialForm() {
     termsAccepted: ''
   })
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
+  const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [loading, setLoading] = useState(false)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value, type, checked } = e.target
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }))
     setErrors((prev) => ({ ...prev, [name]: '' }))
   }
-  
+
   const MAX_FILE_SIZE_MB = 10
 
-  const handleFileChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (file) {
-
       const fileSizeMB = file.size / (1024 * 1024)
 
       if (fileSizeMB > MAX_FILE_SIZE_MB) {
@@ -51,9 +53,7 @@ export default function FreeTrialForm() {
 
       const reader = new FileReader()
       reader.onloadend = () => {
-        const base64String = (
-          reader.result as string
-        ).split(',')[1] // Remove o prefixo do Base64
+        const base64String = (reader.result as string).split(',')[1]
         setFormData((prev) => ({
           ...prev,
           logo: base64String
@@ -76,14 +76,12 @@ export default function FreeTrialForm() {
     let isValid = true
 
     if (!formData.establishmentName) {
-      newErrors.establishmentName =
-        'O nome da barbearia é obrigatório.'
+      newErrors.establishmentName = 'O nome da barbearia é obrigatório.'
       isValid = false
     }
 
     if (!formData.contactName) {
-      newErrors.contactName =
-        'O nome do contato é obrigatório.'
+      newErrors.contactName = 'O nome do contato é obrigatório.'
       isValid = false
     }
 
@@ -98,20 +96,17 @@ export default function FreeTrialForm() {
     }
 
     if (formData.password.length < 8) {
-      newErrors.password =
-        'A senha deve ter pelo menos 8 caracteres.'
+      newErrors.password = 'A senha deve ter pelo menos 8 caracteres.'
       isValid = false
     }
 
     if (!formData.logo) {
-      newErrors.logo =
-        'Envie a logo do seu estabelecimento.'
+      newErrors.logo = 'Envie a logo do seu estabelecimento.'
       isValid = false
     }
 
     if (!formData.termsAccepted) {
-      newErrors.termsAccepted =
-        'Você deve aceitar os Termos de Uso.'
+      newErrors.termsAccepted = 'Você deve aceitar os Termos de Uso.'
       isValid = false
     }
 
@@ -119,10 +114,14 @@ export default function FreeTrialForm() {
     return isValid
   }
 
+  const successRef = useRef<HTMLDivElement>(null)
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setSubmitSuccess(false)
 
     if (validate()) {
+      setLoading(true)
       try {
         const response = await fetch('/api/send-whatsapp', {
           method: 'POST',
@@ -133,7 +132,10 @@ export default function FreeTrialForm() {
         const result = await response.json()
 
         if (response.ok) {
-          alert('Pedido enviado com sucesso!')
+          setSubmitSuccess(true)
+          setTimeout(() => {
+            successRef.current?.scrollIntoView({ behavior: 'smooth' })
+          }, 100)
           setFormData({
             establishmentName: '',
             contactName: '',
@@ -149,131 +151,82 @@ export default function FreeTrialForm() {
       } catch (error) {
         console.error('Erro ao enviar:', error)
         alert('Erro ao enviar o formulário.')
+      } finally {
+        setLoading(false)
       }
     }
   }
 
   return (
-    <div className="mx-auto p-6">
-      <h1 className="text-3xl font-bold mb-4">
-        Solicite seu teste gratis
-      </h1>
-      {/* <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md"> */}
+    <div className="mx-auto p-6 max-w-xl text-white">
+      <div className="text-center mb-8">
+        <h2 className="text-4xl font-bold mb-2">Teste grátis por 7 dias</h2>
+        <p className="text-gray-300 text-lg">
+          Comece agora mesmo e veja como o EasyScheduling pode simplificar sua rotina.
+        </p>
+        <ul className="text-gray-300 text-sm mt-4 list-disc list-inside text-left mx-auto max-w-md">
+          <li>Você preenche os dados abaixo</li>
+          <li>Enviamos o acesso para o WhatsApp ou e-mail</li>
+          <li>Pronto! É só começar a testar :)</li>
+        </ul>
+      </div>
+
+      {/* {submitSuccess && (
+        <div className="bg-green-600 text-white p-4 rounded mb-4 text-center">
+          Pedido enviado com sucesso! Em breve entraremos em contato.
+        </div>
+      )} */}
+
+      {submitSuccess && (
+        <div
+          ref={successRef}
+          className="bg-green-600 text-white p-4 rounded mb-4 text-center"
+        >
+          Pedido enviado com sucesso! Em breve entraremos em contato.
+        </div>
+      )}
+
       <form
         onSubmit={(e) => {
-          void handleSubmit(e)
+          e.preventDefault()
+          handleSubmit(e).catch((err) => {
+            console.error('Erro no envio:', err)
+          })
         }}
-        className="space-y-4 w-full max-w-md"
+        className="space-y-4"
       >
-        <div>
-          <label className="text-white">
-            Nome do Estabelecimento*
-          </label>
-          <input
-            type="text"
-            name="establishmentName"
-            value={formData.establishmentName}
-            onChange={handleChange}
-            className="w-full p-2 rounded text-black"
-          />
-          {errors.establishmentName && (
-            <p className="text-red-500 text-sm">
-              {errors.establishmentName}
-            </p>
-          )}
-        </div>
+        {[
+          { label: 'Nome do Estabelecimento*', name: 'establishmentName' },
+          { label: 'Nome do Contato*', name: 'contactName' },
+          { label: 'Telefone de Contato*', name: 'phone', type: 'tel' },
+          { label: 'E-mail para Acesso*', name: 'email', type: 'email' },
+          { label: 'Senha (mínimo 8 caracteres)*', name: 'password', type: 'password' }
+        ].map(({ label, name, type = 'text' }) => (
+          <div key={name}>
+            <label>{label}</label>
+            <input
+              type={type}
+              name={name}
+              value={formData[name as keyof typeof formData] as string}
+              onChange={handleChange}
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 text-black focus:outline-none focus:ring-2 focus:ring-green-500"
+            />
+            {errors[name as keyof typeof errors] && (
+              <p className="text-red-500 text-sm">{errors[name as keyof typeof errors]}</p>
+            )}
+          </div>
+        ))}
 
         <div>
-          <label className="text-white">
-            Nome do Contato*
-          </label>
-          <input
-            type="text"
-            name="contactName"
-            value={formData.contactName}
-            onChange={handleChange}
-            className="w-full p-2 rounded text-black"
-          />
-          {errors.contactName && (
-            <p className="text-red-500 text-sm">
-              {errors.contactName}
-            </p>
-          )}
-        </div>
-
-        <div>
-          <label className="text-white">
-            Telefone de Contato*
-          </label>
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            inputMode="numeric"
-            pattern="\d*"
-            onInput={(e) => {
-              e.currentTarget.value =
-                e.currentTarget.value.replace(/\D/g, '') // Remove caracteres não numéricos
-            }}
-            className="w-full p-2 rounded text-black"
-          />
-          {errors.phone && (
-            <p className="text-red-500 text-sm">
-              {errors.phone}
-            </p>
-          )}
-        </div>
-
-        <div>
-          <label className="text-white">
-            E-mail para Acesso*
-          </label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className="w-full p-2 rounded text-black"
-          />
-          {errors.email && (
-            <p className="text-red-500 text-sm">
-              {errors.email}
-            </p>
-          )}
-        </div>
-
-        <div>
-          <label className="text-white">
-            Senha (mínimo 8 caracteres)*
-          </label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            className="w-full p-2 rounded text-black"
-          />
-          {errors.password && (
-            <p className="text-red-500 text-sm">
-              {errors.password}
-            </p>
-          )}
-        </div>
-        <div>
-          <label className="text-white">
-            Logo do Estabelecimento*
-          </label>
+          <label>Logo do Estabelecimento*</label>
           <input
             type="file"
             accept="image/*"
             onChange={handleFileChange}
-            className="w-full border p-2"
+            className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-black"
           />
           {errors.logo && (
-            <p className="text-red-500 text-sm">
-              {errors.logo}
-            </p>
+            <p className="text-red-500 text-sm">{errors.logo}</p>
           )}
           {formData.logo && (
             <img
@@ -283,36 +236,36 @@ export default function FreeTrialForm() {
             />
           )}
         </div>
-        <div className="flex items-center">
+
+        <div className="flex items-start">
           <input
             type="checkbox"
             name="termsAccepted"
             checked={formData.termsAccepted}
             onChange={handleChange}
-            className="mr-2"
+            className="mr-2 mt-1"
           />
-          <label className="text-white">
+          <label>
             Eu li e aceito os{' '}
-            <a
-              target="_blank"
-              href="/terms-of-service"
-              className="text-blue-400 underline"
-            >
+            <a href="/terms-of-service" target="_blank" className="text-blue-400 underline">
               Termos de Uso
             </a>
           </label>
         </div>
         {errors.termsAccepted && (
-          <p className="text-red-500 text-sm">
-            {errors.termsAccepted}
-          </p>
+          <p className="text-red-500 text-sm">{errors.termsAccepted}</p>
         )}
+
+        <p className="text-xs text-gray-400 italic">
+          Seus dados estão seguros. Não compartilhamos informações com terceiros.
+        </p>
 
         <button
           type="submit"
-          className="w-full bg-green-600 text-white p-2 rounded"
+          disabled={loading}
+          className="w-full bg-green-600 hover:bg-green-700 transition-all text-white font-semibold py-3 rounded-lg"
         >
-          Enviar Pedido
+          {loading ? 'Enviando...' : 'Solicitar Teste Grátis'}
         </button>
       </form>
     </div>

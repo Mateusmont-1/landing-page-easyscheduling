@@ -21,7 +21,7 @@ export function Header({ className }: SidebarProps) {
   const items = [
     {
       href: 'https://easyscheduling.com.br/sistema_exemplo',
-      title: 'Olhe um exemplo',
+      title: 'Demonstração',
       openInNewTab: true
     },
     { href: '/free-trial', title: 'Teste Gratis' },
